@@ -100,6 +100,19 @@
             margin-bottom: 5px;
         }
     </style>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q8L84DQ1HF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-Q8L84DQ1HF');
+    </script>
 </head>
 <body>
 
@@ -115,7 +128,10 @@
 
     <div class="btn-container">
         <!-- 🎯 避坑：把下面的 href 换成你从小平台拿到的专属推广联运链接 -->
-        <a href="https://fu.qmtool.cn/activityH5/landingPage0903/index.html?inviteUserId=2112093384554639361&timestamp=1793387032313">👉 点击进入私密视频房间 👈</a>
+        <a
+                id="jumpBtn"
+                class="jump-btn"
+                href="https://fu.qmtool.cn/activityH5/landingPage0903/index.html?inviteUserId=2112093384554639361&timestamp=1793387032313">👉 点击进入私密视频房间 👈</a>
     </div>
 
     <div class="footer-bar">
@@ -123,4 +139,12 @@
     </div>
 
 </body>
+<script>
+    document.getElementById('jumpBtn').addEventListener('click', function () {
+        gtag('event', 'click_jump_button', {
+            event_category: 'conversion',
+            event_label: 'main_jump_button'
+        });
+    });
+</script>
 </html>
