@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>我的私人小窝</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #0d0d16;
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
+            overflow: hidden;
+            padding: 20px;
+        }
+        /* 顶部提示状态 */
+        .header-tips {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .status-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #00ff66;
+            border-radius: 50%;
+            margin-right: 5px;
+            box-shadow: 0 0 8px #00ff66;
+        }
+        .header-tips p {
+            font-size: 15px;
+            color: #a0a5c0;
+            letter-spacing: 1px;
+        }
+        /* 主页诱导纯欲图容器 */
+        .img-container {
+            width: 100%;
+            max-width: 360px;
+            height: 60vh;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(255, 20, 147, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* 动态呼吸灯变现按钮 */
+        .btn-container {
+            width: 100%;
+            max-width: 360px;
+            margin-bottom: 20px;
+        }
+        .jump-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #ff1493, #8a2be2);
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            /* 绑定呼吸灯动画 */
+            animation: breathe 1.8s infinite ease-in-out;
+        }
+        /* CSS3 呼吸灯动画逻辑 */
+        @keyframes breathe {
+            0% {
+                transform: scale(0.96);
+                box-shadow: 0 0 10px rgba(255, 20, 147, 0.5), 0 0 20px rgba(138, 43, 226, 0.3);
+            }
+            50% {
+                transform: scale(1.02);
+                /* 放大时强光四射效果 */
+                box-shadow: 0 0 25px rgba(255, 20, 147, 0.9), 0 0 40px rgba(138, 43, 226, 0.7);
+            }
+            100% {
+                transform: scale(0.96);
+                box-shadow: 0 0 10px rgba(255, 20, 147, 0.5), 0 0 20px rgba(138, 43, 226, 0.3);
+            }
+        }
+        /* 底部动态滚动弹幕，制造千人在线假象 */
+        .footer-bar {
+            font-size: 12px;
+            color: #636885;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-tips">
+        <p><span class="status-dot"></span>同城寂寞小窝已开启视频通话...</p >
+        <p style="font-size: 12px; color: #ff1493; margin-top: 5px;">🔥 距离你当前位置 1.2 km</p >
+    </div>
+
+    <div class="img-container">
+        <!-- 🎯 避坑：这里换成你自己找的擦边、瑜伽服、黑色丝袜等纯欲生活照链接 -->
+        <img src="./girl.jpg" alt="正在等待你...">
+    </div>
+
+    <div class="btn-container">
+        <!-- 🎯 避坑：把下面的 href 换成你从小平台拿到的专属推广联运链接 -->
+        👉 点击进入私密视频房间 👈
+    </div>
+
+    <div class="footer-bar">
+        <p>温馨提示：禁止未成年人进入 | 网页已通过安全加密</p >
+    </div>
+
+</body>
+</html>
